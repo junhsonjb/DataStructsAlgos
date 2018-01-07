@@ -44,13 +44,14 @@ public class Sorts {
      amount of times equalvalent to the amount of elements in the array, but with each
      iteration, we reduce i by one. This way we are not repeating the process on elemeents
      that are already sorted (elements are sorted starting from the end going to the front).
+     Run Time: O(N^2)
      */
     public static void bubble(int[] a) {
 
         int temp;
         /* Mistake == you had the boolean (second clause of if) as i == 0 */
         /* This will make the code only run as long as i is equal tp 0 */
-        /* That was a dubm mistake */
+        /* That was a dumb mistake */
         for (int i = a.length - 1; i >= 0; i--) {
 
             for (int j = 0; j <= i - 1; j++) {
