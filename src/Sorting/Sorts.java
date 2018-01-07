@@ -3,24 +3,8 @@ package Sorting;
 import java.util.Arrays;
 
 
-public class Selection {
+public class Sorts {
 
-    /* This function ended up not being used */
-    public static int minimum(int[] a) {
-        //int min;
-
-        if (a == null) return -1; //handles null arguments
-        if (a.length < 1) return -1; //handles empty lists
-        if (a.length == 1) return a[0]; //handles one-element arrays
-
-        //all other situations
-        int min = a[0];
-        for (int i = 0; i < a.length - 1; i++) {
-            if (a[i] < min) min = a[i];
-        }
-
-        return min;
-    }
 
     public static void selection(int[] a) {
 
@@ -46,12 +30,33 @@ public class Selection {
 
     }
 
+    /* Method is not correct yet, results in same loop */
+    /* compile this code on paper to find exact problem */
+    public static void bubble(int[] a) {
+
+        for (int i = a.length - 2; i == 0; i--) {
+
+            for (int j = 0; j <= i; j++) {
+
+                int temp;
+                if (a[j] > a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+
+            }
+
+        }
+
+    }
+
 
     public static void main(String[] args) {
 
-        int[] a = {100, 1, 8, 7, 6};
-        selection(a);
-        //System.out.println(minimum(a)); //test for minimum function
+        int[] a = {12, 1, 8, 7, 6};
+        //selection(a);
+        bubble(a);
         System.out.println(Arrays.toString(a));
 
     }
