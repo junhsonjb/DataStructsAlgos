@@ -30,16 +30,20 @@ public class Sorts {
 
     }
 
-    /* Method is not correct yet, results in same loop */
-    /* compile this code on paper to find exact problem */
+    /* WORKS, thank God */
+    /* There is an implementation of this method that uses booleans and a while/do While loop. I prefer this way */
     public static void bubble(int[] a) {
 
-        for (int i = a.length - 2; i == 0; i--) {
+        int temp;
+        /* Mistake == you had the boolean (second clause of if) as i == 0 */
+        /* This will make the code only run as long as i is equal tp 0 */
+        /* That was a dubm mistake */
+        for (int i = a.length - 1; i >= 0; i--) {
 
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j <= i - 1; j++) {
 
-                int temp;
-                if (a[j] > a[j + 1]) {
+                if (a[j] > a[j + 1]) { //if ith element is greater than i+1th element
+                    //swap em
                     temp = a[j];
                     a[j] = a[j + 1];
                     a[j + 1] = temp;
