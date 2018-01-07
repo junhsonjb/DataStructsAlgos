@@ -2,6 +2,10 @@ package Sorting;
 
 import java.util.Arrays;
 
+/* I haven't optimized any of these methods for errors, for the sake of learning,
+   I'm assuming that inputs will be friendly. If I never need to use these methods
+   in a project, I'll be sure to adjust them for that purpose.
+ */
 
 public class Sorts {
 
@@ -66,6 +70,16 @@ public class Sorts {
             }
 
         }
+
+    }
+
+
+
+    public static void merge(int[] a) {
+
+        if (a.length == 1) return; //if the array has one element it's already sorted
+
+        /*split the array into 2 by the half of the original (a) */
 
     }
 
